@@ -1,0 +1,134 @@
+.main-wrapper {
+    width: 100%;
+    height: 100svh;
+    border: 10px solid lightgreen;
+}
+
+.main-inner {
+    width: 100%;
+    height: 200svh;
+    border: 10px dashed lightsalmon;
+}
+
+.sc-main {
+    width: 100%;
+    height: 100svh;
+    position: relative;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sc-main .main-img {
+    width: 100%;
+    height: 100%;
+}
+
+.sc-main .main-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    border: 10px solid lightyellow;
+    background-color: #fff;
+    width: 100%;
+}
+
+.content-wrapper .content-inner {
+    padding: 0 .625rem;
+    margin: 0 auto;
+
+    max-width: 1920px;
+}
+
+
+.content-inner .about-txt {
+    font-family: 'PPEditorialOld-Ultralight.woff2';
+
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.content-inner .about-txt .txt {
+    font-size: 8em;
+    font-weight: 100;
+    line-height: .8;
+    text-transform: uppercase;
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.about-txt .txt1 {}
+
+.about-txt .txt2 {}
+
+.about-txt .txt3 {}
+
+.about-txt .txt4 {}
+
+
+
+
+
+
+.content-inner .intro-1 {}
+
+.content-inner .intro-1 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content-inner .intro-2 {}
+
+.content-inner .intro-2 img {}
+
+.content-inner .intro-3 {}
+
+.content-inner .intro-3 img {}
+
+
+
+
+.client-wrapper {
+    padding: 30vh 0;
+    border: 10px solid lightcyan;
+}
+
+.client-wrapper .client-area {
+    display: flex;
+    justify-content: center;
+    border: 10px solid limegreen;
+
+}
+
+.client-wrapper .client-area .client-list {}
+
+.client-wrapper .client-area .client-item {
+    text-align: center;
+    font-size: 7.5rem;
+    line-height: .9;
+    text-transform: uppercase;
+    font-family: 'ESAllianz-Extrabold.woff2';
+    color: #000;
+}

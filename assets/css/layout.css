@@ -1,0 +1,90 @@
+#header,
+#footer {
+    font-family: 'IBMPlexMono-Light.woff2';
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    padding: 0.625rem;
+    width: 100%;
+}
+
+#header .header-wrapper {
+    background-color: #a0fdd0d9;
+    box-sizing: border-box;
+
+    width: 30%;
+    height: 70px;
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header .header-wrapper .title {
+    display: flex;
+    flex-direction: column;
+}
+
+#header .header-wrapper .title a {}
+
+#header .header-wrapper .title p {}
+
+#header .header-wrapper .cate-list {}
+
+#header .header-wrapper .cate-list .cate-item {}
+
+
+
+
+
+
+
+
+
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    padding: 0.625rem;
+    width: 100%;
+}
+
+
+#footer .footer-wrapper {
+    background-color: #a0fdd0d9;
+    box-sizing: border-box;
+
+    width: 30%;
+    height: 70px;
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer .footer-wrapper .footer-col {
+    display: flex;
+    flex-direction: column;
+}
