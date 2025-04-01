@@ -60,9 +60,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
+
 
 .content-inner .about-txt .txt {
     font-size: 8em;
@@ -78,13 +77,18 @@
     gap: 16px;
 }
 
-.about-txt .txt1 {}
+.about-txt .txt .txt1 {
+    left: -3em;
+}
 
-.about-txt .txt2 {}
+.about-txt .txt .txt2 {
+    left: -8em;
 
-.about-txt .txt3 {}
+}
 
-.about-txt .txt4 {}
+.about-txt .txt .txt3 {}
+
+.about-txt .txt .txt4 {}
 
 
 
@@ -112,13 +116,36 @@
 
 .client-wrapper {
     padding: 30vh 0;
-    border: 10px solid lightcyan;
+    border: 10px dashed lightgreen;
+
+    width: 100%;
+    height: 100svh;
 }
 
 .client-wrapper .client-area {
     display: flex;
     justify-content: center;
     border: 10px solid limegreen;
+
+    width: 100%;
+    height: 200svh;
+
+    position: relative;
+}
+
+.client-wrapper .client-area .client-title {
+    color: #a0fdd0;
+    font-size: 15em;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -131,4 +158,70 @@
     text-transform: uppercase;
     font-family: 'ESAllianz-Extrabold.woff2';
     color: #000;
+}
+
+
+
+
+
+
+.love-wrapper {
+    width: 100%;
+    height: 100svh;
+
+    border: 10px solid royalblue;
+
+}
+
+.love-wrapper .sc-love {
+    width: 100%;
+    height: 200svh;
+
+    position: relative;
+    border: 10px solid pink;
+
+    background-color: #fff;
+
+}
+
+.love-wrapper .sc-love .heart-shape {
+    padding: 30vh 0;
+}
+
+
+.love-wrapper .sc-love .love-title {
+    font-family: 'PPEditorialOld-Ultralight.woff2';
+
+    font-size: 8em;
+    font-weight: 100;
+    line-height: .8;
+    text-transform: uppercase;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+}
+
+.love-wrapper .sc-love .heart-shape {}
+
+.love-wrapper .sc-love .heart-shape img {
+    display: none;
+}
+
+.goto-wrapper {
+    border: 10px solid magenta;
+    height: 100svh;
+
+    z-index: 2;
+
+}
+
+.goto-wrapper .sc-goto {}
+
+.goto-wrapper .goto-list {
+    font-family: 'IBMPlexMono-Light.woff2';
+}
+
+.goto-wrapper .goto-list .goto-item {
+    font-size: 8em;
 }
