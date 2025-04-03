@@ -26,27 +26,7 @@
 
 <body>
 
-
-    <header id="header">
-
-        <div class="header-wrapper">
-            <h1 class="title">
-                <a href="">Maël Ruffini</a>
-                <p>Folio ©2025</p>
-            </h1>
-            <div class="cate-list">
-                <a href="" class="cate-item">Work,</a>
-                <a href="" class="cate-item">Informations,</a>
-                <a href="" class="cate-item">Entries</a>
-            </div>
-        </div>
-
-    </header>
-
-
-
-
-
+    <div id="header"></div>
 
     <div class="main-wrapper">
         <div class="main-inner">
@@ -138,31 +118,17 @@
 
 
 
-
-    <footer id="footer">
-
-        <div class="footer-wrapper">
-            <div class="footer-col">
-                Creative developer @ <a href="">También,</a>
-                also available for Freelance.
-            </div>
-            <div class="footer-col">
-                Paris, Fr — 09:36
-                <div class="link-wrapper">
-                    <a href="">Linkedin,</a>
-                    <a href="">X,</a>
-                    <a href="">Newsletter,</a>
-                    <a href="">Email</a>
-                </div>
-            </div>
-        </div>
-
-    </footer>
-
-
-
+    <div id="footer"></div>
 
 
 </body>
+
+<script>
+    // jQuery로 공통 파일 불러오기
+    $(function () {
+        $("#header").load("../include/header.html");
+        $("#footer").load("../include/footer.html");
+    });
+</script>
 
 </html>
