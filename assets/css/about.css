@@ -26,10 +26,38 @@
     color: #000;
 }
 
-.desc-wrapper {}
 
-.desc-wrapper .desc {}
 
-.desc-wrapper .desc li .desc-title {}
 
-.desc-wrapper .desc li {}
+.about-main .desc-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: 1920px;
+    min-width: 1280px;
+}
+
+.about-main .desc-wrapper .desc {
+    font-family: 'IBMPlexMono-Light.woff2';
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50%;
+}
+
+.about-main .desc-wrapper .desc .desc-title {
+    margin-bottom: 16px;
+}
+
+.about-main .desc-wrapper .desc li {}
+
+.about-main .desc-wrapper .desc .right-desc {}
+
+.about-main .desc-wrapper .desc .left-desc {
+    display: flex;
+    gap: 100px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Snap Demo</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            /* scroll-snap-type: y proximity; */
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+
+        section {
+            height: 100svh;
+            scroll-snap-align: start;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-family: sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        .one {
+            background: #1e90ff;
+        }
+
+        .two {
+            background: #28a745;
+        }
+
+        .three {
+            background: #ff6f61;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="one">📘 Section 1</section>
+    <section class="two">🍃 Section 2</section>
+    <section class="three">🔥 Section 3</section>
+</body>
+
+</html>
