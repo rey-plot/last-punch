@@ -1,0 +1,111 @@
+.modal-list.none {
+    display: none;
+}
+
+
+.modal-dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.works-wrapper {}
+
+.works-wrapper .works-area {}
+
+.works-wrapper .works-list {}
+
+.works-wrapper .works-item {}
+
+.works-item .open-modal-btn {}
+
+.works-item .open-modal-btn img {}
+
+
+.modal-wrapper {}
+
+.modal-list {
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #fff;
+    padding: 2rem;
+    padding-bottom: 100px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    display: none;
+    width: 80%;
+    max-width: 1280px;
+
+    overflow-y: auto;
+    text-align: center;
+    color: black;
+
+}
+
+.modal-list .modal-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.modal-list img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.modal-list .desc-title {
+    font-family: 'PPEditorialOld-Ultralight.woff2';
+    font-size: 6rem;
+    line-height: .9;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal-list .desc-txt {
+    font-family: 'IBMPlexMono-Light.woff2';
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal-list .desc-info {
+    font-family: 'IBMPlexMono-Light.woff2';
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-bottom: 100px;
+}
+
+
+.modal-list .modal-close {
+    font-family: 'IBMPlexMono-Light.woff2';
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 100px;
+
+    background-color: #ccffe6;
+    margin-top: 100px;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+}

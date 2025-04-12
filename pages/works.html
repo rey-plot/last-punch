@@ -13,6 +13,7 @@
     <script src="./assets/js/layout.js"></script>
 
 
+    <link rel="stylesheet" href="../assets/css/works.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
@@ -26,56 +27,95 @@
         <div class="works-area">
             <ul class="works-list">
                 <li class="works-item">
-                    <a href=""><img src="../assets/image/intro-1.jpg" alt=""></a>
+                    <button class="open-modal-btn" data-target="#modal-1">
+                        <img src="../assets/image/intro-1.jpg" alt="works-1">
+                    </button>
                 </li>
             </ul>
         </div>
     </div>
 
 
+
+
     <div class="modal-dimmed"></div>
-    <div class="modal-list" id="modal-1">
-        <img src="../assets/image/intro-1.jpg" alt="">
 
-        <strong class="desc-title">Jonathan <br>
-            Grado</strong>
-        <p class="desc-txt">The Jonathan Grado website brings to life the creative journey of Jonathan
-            Grado, the third-generation leader of Brooklyn’s renowned Grado Labs. Born and raised in
-            Brooklyn, Jonathan has blended his family’s legacy in audio innovation with his passion for
-            multidisciplinary photography. The site features a cinematic design that mirrors Jonathan’s
-            artistic vision, showcasing his work with brands like Pokémon and A24 Films, as well as his
-            appearances in commercials for American Express and segments on NBC, CNN, and Vice. Designed for
-            flexibility, the website uses a modular layout. Smooth transitions and immersive visuals guide
-            users through Jonathan’s portfolio, highlighting his attention to detail and creative
-            storytelling.</p>
-        <p class="desc-info">Year
-            2024
-            Agency
-            Concrete Club
-            Design
-            Concrete Club
-            Stack
-            Webflow
-            Gsap
-            Barba.js
-            Live Website</p>
 
-        <img src="../assets/image/Z5Ody5bqstJ990mj_image-4.jpg" alt="">
-        <img src="../assets/image/Z5OdyJbqstJ990mg_image-1.jpg" alt="">
-        <img src="../assets/image/Z5OdypbqstJ990mi_image-3.jpg" alt="">
-        <img src="../assets/image/Z5OdzJbqstJ990mk_image-5.jpg" alt="">
-        <button class="modal-close">close</button>
+
+
+    <div class="modal-list none" id="modal-1">
+        <div class="modal-area">
+            <img src="../assets/image/intro-1.jpg" alt="">
+            <strong class="desc-title">Jonathan <br>
+                Grado</strong>
+            <p class="desc-txt">The Jonathan Grado website brings to life the creative journey of Jonathan
+                Grado, the third-generation leader of Brooklyn’s renowned Grado Labs. Born and raised in
+                Brooklyn, Jonathan has blended his family’s legacy in audio innovation with his passion for
+                multidisciplinary photography. The site features a cinematic design that mirrors Jonathan’s
+                artistic vision, showcasing his work with brands like Pokémon and A24 Films, as well as his
+                appearances in commercials for American Express and segments on NBC, CNN, and Vice. Designed for
+                flexibility, the website uses a modular layout. Smooth transitions and immersive visuals guide
+                users through Jonathan’s portfolio, highlighting his attention to detail and creative
+                storytelling.</p>
+            <p class="desc-info">Year
+                2024
+                Agency
+                Concrete Club
+                Design
+                Concrete Club
+                Stack
+                Webflow
+                Gsap
+                Barba.js
+                Live Website</p>
+            <img src="../assets/image/Z5Ody5bqstJ990mj_image-4.jpg" alt="">
+            <img src="../assets/image/Z5OdyJbqstJ990mg_image-1.jpg" alt="">
+            <img src="../assets/image/Z5OdypbqstJ990mi_image-3.jpg" alt="">
+            <img src="../assets/image/Z5OdzJbqstJ990mk_image-5.jpg" alt="">
+            <button class="modal-close">close</button>
+        </div>
     </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="footer"></div>
+
 
     <script>
         $(function () {
             $("#header").load("../include/header.html");
             $("#footer").load("../include/footer.html");
         });
+
+        $(".open-modal-btn").on("click", function () {
+            const target = $(this).data("target");
+            $(".modal-dimmed").fadeIn();
+            $(target).fadeIn();
+        });
+
+        $(".modal-close, .modal-dimmed").on("click", function () {
+            $(".modal-dimmed").fadeOut();
+            $(".modal-list").fadeOut();
+        });
+
+
     </script>
+
+
 </body>
 
 </html>
