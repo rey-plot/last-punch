@@ -17,11 +17,21 @@
 
 
 
-.works-wrapper {}
+.works-wrapper {
+    width: 100%;
+    padding: 0 100px;
+}
 
-.works-wrapper .works-area {}
+.works-wrapper .works-area {
+    width: 100%;
+    
+}
 
-.works-wrapper .works-list {}
+.works-wrapper .works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
 
 .works-wrapper .works-item {}
 
@@ -46,8 +56,8 @@
 
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     display: none;
-    width: 80%;
-    max-width: 1280px;
+    width: 100%;
+    max-width: 1440px;
 
     text-align: center;
     color: black;
@@ -55,15 +65,15 @@
     overflow-y: overlay;
 
 
+    -ms-overflow-style: none;
+    /* IE, Edge */
+    scrollbar-width: none;
+    /* Firefox */
 
-
-    -ms-overflow-style: none;  /* IE, Edge */
-    scrollbar-width: none;     /* Firefox */
-    
     &::-webkit-scrollbar {
-        display: none;         /* Chrome, Safari, Opera */
+        display: none;
+        /* Chrome, Safari, Opera */
     }
-    
 
     mask-image: -webkit-radial-gradient(white, black);
     -webkit-mask-image: -webkit-radial-gradient(white, black);
@@ -139,8 +149,6 @@
 
 
 
-
-
 .modal-list .modal-close {
     font-family: 'IBMPlexMono-Light.woff2';
     font-size: 0.8rem;
@@ -162,5 +170,4 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: -4%;
-
 }
