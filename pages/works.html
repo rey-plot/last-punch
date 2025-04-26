@@ -36,7 +36,7 @@
                         <img src="../assets/image/intro-2.jpg" alt="works-2">
                     </button>
                     <button class="open-modal-btn" data-target="#modal-3">
-                        <img src="../assets/image/intro-3.jpg" alt="works-2">
+                        <img src="../assets/image/intro-3.jpg" alt="works-3">
                     </button>
                 </li>
             </ul>
@@ -145,6 +145,58 @@
             <img src="../assets/image/modal-list2/modal2nnpbqstJ990s0_image-5.jpg" alt="">
             <img src="../assets/image/modal-list2/modal2nnpbqstJ990s3_image-8.jpg" alt="">
             <img src="../assets/image/modal-list2/modal2noZbqstJ990s4_image-9.jpg" alt="">
+
+            <button class="modal-close">close</button>
+
+        </div>
+    </div>
+
+
+    <div class="modal-list none" id="modal-3">
+        <div class="modal-area">
+            <img src="../assets/image/intro-2.jpg" alt="">
+
+            <div class="modal-desc">
+
+                <p class="desc-txt">Rose Island is a website inspired by the Netflix movie that tells the true story of
+                    Giorgio Rosa. Rosa built a platform off the Italian coast to declare his own nation, and the website
+                    brings his project to life in an engaging way. Using real-time 3D visuals, visitors can explore the
+                    platform’s design and its beautiful seaside location. Smooth scrolling animations guide users
+                    through the story, encouraging them to watch the movie for more details. The site offers an
+                    immersive experience by blending storytelling with interactive elements. Dynamic visuals enhance the
+                    narrative, making Rosa’s journey easy to follow. </p>
+                <strong class="desc-title">
+                    Rose <br>
+                    Island
+                </strong>
+                <div class="desc-info">
+                    <p class="desc-info-txt">
+                        Year
+                        2022
+
+                        Agency
+                        También
+                        Design
+                        También
+                        Stack
+                        Webflow
+                        Gsap
+                        Three.js
+                        Blender
+                        Live Website
+                    </p>
+                </div>
+            </div>
+
+
+            <img src="../assets/image/modal-list2/modal2nm5bqstJ990sy_image-3.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nmpbqstJ990sx_image-2.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nn5bqstJ990s2_image-7.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nnJbqstJ990sz_image-4.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nnpbqstJ990s1_image-6.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nnpbqstJ990s0_image-5.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2nnpbqstJ990s3_image-8.jpg" alt="">
+            <img src="../assets/image/modal-list2/modal2noZbqstJ990s4_image-9.jpg" alt="">
             <img src="../assets/image/modal-list2/modal2noZbqstJ990s5_image-10.jpg" alt="">
             <img src="../assets/image/modal-list2/modal2s6JbqstJ990wq_hero.jpg" alt="">
 
@@ -181,12 +233,14 @@
             $(".modal-dimmed").fadeIn();
             $(target).fadeIn();
             $(target).scrollTop(0);
+            $("body").addClass("body-no-scroll");
         });
 
 
         $(".modal-close, .modal-dimmed").on("click", function () {
             $(".modal-dimmed").fadeOut();
             $(".modal-list").fadeOut();
+            $("body").removeClass("body-no-scroll");
         });
 
 
