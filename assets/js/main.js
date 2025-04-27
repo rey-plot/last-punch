@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3 client-title sticky
 
     gsap.from('.client-title', {
-        y: 100,
+        // y: 100,
         opacity: 0,
         duration: 1,
         ease: "power2.out",
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: 1,
             onLeave: function () {    // ScrollTrigger 안으로 이동
                 gsap.to('.client-title', {
-                    y: -100,
+                    y: -50,
                     opacity: 0,
                     duration: 1
                 });
@@ -137,12 +137,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
     // love
-    const loveTimeline = gsap.timeline({ scrollTrigger: { trigger: ".sc-love", start: "top 30%", } });
-    loveTimeline.from('.sc-love .love-title', { opacity: 0, y: 30, stagger: 0.2, ease: "power2.out", });
-    loveTimeline.to('.sc-love .heart-shape', 1.5, { scale: window.innerWidth / 50, opacity: 1, ease: "power2.out", onComplete: function () { loveTimeline.to('.sc-love .heart-shape', { borderRadius: '0%', }); } });
+
+    const loveTimeline = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sc-love",
+            start: "top center",
+            // markers: true,
+        }
+    });
+
+    loveTimeline.from('.sc-love .love-title', {
+        opacity: 0,
+        y: 30,
+        stagger: 0.2,
+        ease: "power2.out",
+    });
+
+    loveTimeline.to('.sc-love .heart-shape', 1.5, {
+        scale: window.innerWidth / 50,
+        opacity: 1,
+        ease: "power2.out",
+        onComplete: function () {
+            loveTimeline.to('.sc-love .heart-shape', {
+                borderRadius: '0%',
+            });
+        }
+    });
+
+
+
+
+    gsap.from('.goto-wrapper', 1, {
+        opacity: 0,
+        y: 100,
+        stagger: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".goto-wrapper",
+            start: "60% 100%",
+            // markers: true,
+        }
+    });
+
+    // gsap.to('.goto-wrapper', 1,{
+    //     backgroundColor: '#1C1C1C',
+    //     color: '#a0fdd0',
+    //     ease: "power2.out",
+    //     scrollTrigger: {
+    //         trigger: ".goto-wrapper",
+    //         start: "top 80%",
+    //         end: "top 30%",
+    //     }
+    // });
+
+
+
 
 
 

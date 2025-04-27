@@ -117,6 +117,7 @@
 
     width: 100%;
     /* height: 200svh; */
+
 }
 
 .client-wrapper .client-area {
@@ -127,6 +128,7 @@
 
     width: 100%;
     height: 200svh;
+
 }
 
 .client-wrapper .client-area .client-title {
@@ -141,7 +143,18 @@
     font-weight: 400;
     font-style: normal;
     z-index: 10;
+
 }
+
+/* .client-wrapper .client-area .client-title::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    width: 1rem;
+    height: 1px;
+    background: currentColor;
+} */
 
 .client-wrapper .client-area .client-list {}
 
@@ -161,16 +174,18 @@
 
 .love-wrapper {
     width: 100%;
-    height: 100svh;
+    height: auto;
 
-    border: 10px solid royalblue;
+    overflow: hidden;
 }
 
 .love-wrapper .sc-love {
     width: 100%;
-    height: 100vh;
+    height: 150svh;
     position: relative;
-    /* background-color: #fff; */
+
+    /* border: 10px solid royalblue; */
+
 }
 
 
@@ -190,6 +205,7 @@
 
     width: 50px;
     height: 50px;
+
 }
 
 
@@ -209,7 +225,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    color: #fff;
+    z-index: 10;
 }
 
 
@@ -218,31 +235,53 @@
 
 
 .goto-wrapper {
-    border: 10px solid magenta;
-
+    width: 100%;
+    height: 100svh;
     position: relative;
-    z-index: 2;
 
-    padding: 200px 0;
+    padding-bottom: 90px;
+
 }
 
 .goto-wrapper .sc-goto {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .goto-wrapper .goto-list {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* padding-top: 20svh; */
 }
 
 .goto-wrapper .goto-list .goto-item {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'PPEditorialOld-Ultralight.woff2';
 
-    font-size: 1.5em;
+    font-size: 10em;
+    line-height: 1;
+
+    text-decoration: underline;
+    text-decoration-thickness: 0.01em;
+    text-underline-offset: 0.05em;
 }
+
+/* js있어서 안되나본데 */
+.goto-wrapper .goto-list .goto-item:hover {
+    transform: scale(0.98);
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+
 
 /* #header,
 #footer {
