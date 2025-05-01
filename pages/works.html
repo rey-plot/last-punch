@@ -10,8 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/layout.js"></script>
-
+    <script src="../assets/js/layout.js"></script>
+    <script src="../assets/js/modal.js"></script>
 
     <link rel="stylesheet" href="../assets/css/works.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
@@ -58,13 +58,13 @@
             <div class="modal-desc">
 
                 <p class="desc-txt">The Jonathan Grado website brings to life the creative journey of Jonathan
-                    Grado, the third-generation leader of Brooklyn’s renowned Grado Labs. Born and raised in
-                    Brooklyn, Jonathan has blended his family’s legacy in audio innovation with his passion for
-                    multidisciplinary photography. The site features a cinematic design that mirrors Jonathan’s
+                    Grado, the third-generation leader of Brooklyn's renowned Grado Labs. Born and raised in
+                    Brooklyn, Jonathan has blended his family's legacy in audio innovation with his passion for
+                    multidisciplinary photography. The site features a cinematic design that mirrors Jonathan's
                     artistic vision, showcasing his work with brands like Pokémon and A24 Films, as well as his
                     appearances in commercials for American Express and segments on NBC, CNN, and Vice. Designed for
                     flexibility, the website uses a modular layout. Smooth transitions and immersive visuals guide
-                    users through Jonathan’s portfolio, highlighting his attention to detail and creative
+                    users through Jonathan's portfolio, highlighting his attention to detail and creative
                     storytelling.
                 </p>
                 <strong class="desc-title">
@@ -109,10 +109,10 @@
                 <p class="desc-txt">Rose Island is a website inspired by the Netflix movie that tells the true story of
                     Giorgio Rosa. Rosa built a platform off the Italian coast to declare his own nation, and the website
                     brings his project to life in an engaging way. Using real-time 3D visuals, visitors can explore the
-                    platform’s design and its beautiful seaside location. Smooth scrolling animations guide users
+                    platform's design and its beautiful seaside location. Smooth scrolling animations guide users
                     through the story, encouraging them to watch the movie for more details. The site offers an
                     immersive experience by blending storytelling with interactive elements. Dynamic visuals enhance the
-                    narrative, making Rosa’s journey easy to follow. </p>
+                    narrative, making Rosa's journey easy to follow. </p>
                 <strong class="desc-title">
                     Rose <br>
                     Island
@@ -161,10 +161,10 @@
                 <p class="desc-txt">Rose Island is a website inspired by the Netflix movie that tells the true story of
                     Giorgio Rosa. Rosa built a platform off the Italian coast to declare his own nation, and the website
                     brings his project to life in an engaging way. Using real-time 3D visuals, visitors can explore the
-                    platform’s design and its beautiful seaside location. Smooth scrolling animations guide users
+                    platform's design and its beautiful seaside location. Smooth scrolling animations guide users
                     through the story, encouraging them to watch the movie for more details. The site offers an
                     immersive experience by blending storytelling with interactive elements. Dynamic visuals enhance the
-                    narrative, making Rosa’s journey easy to follow. </p>
+                    narrative, making Rosa's journey easy to follow. </p>
                 <strong class="desc-title">
                     Rose <br>
                     Island
@@ -207,47 +207,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     <div id="footer"></div>
 
 
-    <script>
-        $(function () {
-            $("#header").load("../include/header.html");
-            $("#footer").load("../include/footer.html");
-        });
-
-
-        $(".open-modal-btn").click(function () {
-            const target = $(this).data("target");
-            $(".modal-dimmed").fadeIn();
-            $(target).fadeIn();
-            $(target).scrollTop(0);
-            $("body").addClass("body-no-scroll");
-        });
-
-
-        $(".modal-close, .modal-dimmed").on("click", function () {
-            $(".modal-dimmed").fadeOut();
-            $(".modal-list").fadeOut();
-            $("body").removeClass("body-no-scroll");
-        });
-
-
-
-
-    </script>
-
+    
 
 </body>
 

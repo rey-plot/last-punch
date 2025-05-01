@@ -14,8 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/layout.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="../assets/js/layout.js"></script>
 
 
     <link rel="stylesheet" href="../assets/css/about.css">
@@ -31,31 +30,33 @@
     <main class="about-main">
         <div class="main-wrapper">
             <div class="about-title">
-                Maël <br>Ruffini <br>
-                Folio<br> ©2025
+                <span class="title-line">Maël</span>
+                <span class="title-line">Ruffini</span>
+                <span class="title-line">Folio</span>
+                <span class="title-line">©2025</span>
             </div>
         </div>
         <div class="desc-wrapper">
             <ul class="desc">
-                <li class="right-desc">
+                <li class="left-desc">
                     I am a developer focused on creating engaging digital experiences. With a background in front-end
                     development and project management, I combine technical expertise with attention to detail to build
                     websites that meet the needs of clients and users alike. My approach is practical and user-oriented,
-                    ensuring each project is both effective and easy to use. Over the years, I’ve worked on a variety of
+                    ensuring each project is both effective and easy to use. Over the years, I've worked on a variety of
                     projects, adapting to different industries and challenges. I value collaboration and clear
                     communication, working closely with clients to turn their ideas into reality. Each project is an
                     opportunity to create something useful and well-designed, leveraging technology to solve problems
                     and
                     achieve goals.
                 </li>
-                <div class="left-desc">
+                <div class="right-desc">
                     <li>
-                        <div class="desc-title">2020 — Present</div>
+                        <h3 class="desc-title">2020 — Present</h3>
                         Front-end developer
                         Available
                     </li>
                     <li>
-                        <div class="desc-title">Clients</div>
+                        <h3 class="desc-title">Clients</h3>
                         Concrete club
                         Mccann NYC
                         Superculture
@@ -67,7 +68,7 @@
                         Lumara
                     </li>
                     <li>
-                        <div class="desc-title">Technologies</div>
+                        <h3 class="desc-title">Technologies</h3>
                         Javascript
                         NextJS
                         ThreeJS
@@ -86,13 +87,7 @@
 
 
 
-    <script>
-        // jQuery로 공통 파일 불러오기
-        $(function () {
-            $("#header").load("../include/header.html");
-            $("#footer").load("../include/footer.html");
-        });
-    </script>
+
 </body>
 
 </html>
