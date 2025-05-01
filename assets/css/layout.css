@@ -73,21 +73,29 @@
 #footer .footer-wrapper {
     background-color: #a0fdd0d9;
     box-sizing: border-box;
-
-    /* width: 30%; */
     width: clamp(320px, 80%, 620px);
-
     height: 70px;
     margin: 0 auto;
-
     font-size: 16px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+    /* 슬로건 포지셔닝 기준점 */
 }
 
 #footer .footer-wrapper .footer-col {
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    max-width: 45%;
+}
+
+#footer .footer-wrapper .slogan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: 'IBMPlexMono-Light.woff2';
+    font-size: 16px;
 }
