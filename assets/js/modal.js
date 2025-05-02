@@ -1,19 +1,42 @@
 $(document).ready(function () {
     // 모달 열기
-    $(".open-modal-btn").click(function () {
+    $(".open-modal-btn").on("click", function () {
         const target = $(this).data("target");
+        $(target).removeClass("none");
+        $("body").addClass("body-no-scroll");
+
+        
+        // close 버튼 초기 상태
+        gsap.set(`${target} .modal-close`, {
+            opacity: 0,
+            y: 20
+        });
+
+        // 스크롤에 따른 close 버튼 애니메이션
+        ScrollTrigger.create({
+            trigger: target,
+            start: "top 80%",
+            onEnter: () => {
+                gsap.to(`${target} .modal-close`, 0.5, {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power2.out"
+                });
+            }
+        });
+
+
+
         $(".modal-dimmed").fadeIn();
         $(target).fadeIn();
         $(target).scrollTop(0);
-        $("body").addClass("body-no-scroll");
 
         gsap.from(`${target} .modal-desc`, 0.5, {
             y: 30,
             opacity: 0,
             ease: 'power2.out',
-            delay: 1.2  // fadeIn 후에 시작
+            delay: 1.5,  // fadeIn 후에 시작
         });
-
     });
 
 
@@ -23,6 +46,12 @@ $(document).ready(function () {
         $(".modal-list").fadeOut();
         $("body").removeClass("body-no-scroll");
     });
+
+    // 모달 close 버튼 리마인드
+    // gsap.to(".modal-close", 1, {
+    //     y: 30,
+    //     ease: 'power2.out',
+    // });
 
     // 키다운들
     $(document).on("keydown", function (e) {
