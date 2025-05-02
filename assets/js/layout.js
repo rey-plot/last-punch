@@ -18,8 +18,8 @@ window.headerManager = {
 
 $(document).ready(function () {
     // 헤더, 푸터 로드
-    $("#header").load("/include/header.html", function () {
-        $("#footer").load("/include/footer.html", function () {
+    $("#header").load("/test/include/header.html", function () {
+        $("#footer").load("/test/include/footer.html", function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
 
             // 초기 opacity 설정
