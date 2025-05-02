@@ -17,9 +17,12 @@ window.headerManager = {
 };
 
 $(document).ready(function () {
+    // 현재 페이지의 base path 계산
+    const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
+
     // 헤더, 푸터 로드
-    $("#header").load("/test/include/header.html", function () {
-        $("#footer").load("/test/include/footer.html", function () {
+    $("#header").load(`${basePath}/include/header.html`, function () {
+        $("#footer").load(`${basePath}/include/footer.html`, function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
 
             // 초기 opacity 설정
@@ -46,14 +49,7 @@ $(document).ready(function () {
                 document.querySelector('footer').classList.add('scrolled');
             }
 
-
-
-
-
             // about 페이지 js
-
-
-
             gsap.from('.about-main .title-line', 0.5, {
                 y: 30,
                 opacity: 0,
@@ -67,10 +63,5 @@ $(document).ready(function () {
                 ease: 'power2.out'
             }, ">");
         });
-
-
-
-
-
     });
 });
