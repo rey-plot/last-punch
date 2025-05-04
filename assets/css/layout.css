@@ -3,6 +3,11 @@
     font-family: 'IBMPlexMono-Light.woff2';
 }
 
+#header>div,
+#footer>div {
+    opacity: 0.9;
+}
+
 #header {
     display: flex;
     align-items: center;
@@ -53,8 +58,6 @@
 
 
 
-
-
 #footer {
     display: flex;
     align-items: center;
@@ -71,9 +74,10 @@
 
 
 #footer .footer-wrapper {
-    background-color: #a0fdd0d9;
+    /* background-color: #a0fdd0d9; */
+    color: #a0fdd0;
     box-sizing: border-box;
-    width: clamp(320px, 80%, 620px);
+    width: clamp(500px, 80%, 1000px);
     height: 70px;
     margin: 0 auto;
     font-size: 16px;
@@ -81,7 +85,6 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    /* 슬로건 포지셔닝 기준점 */
 }
 
 #footer .footer-wrapper .footer-col {
@@ -89,6 +92,10 @@
     flex-direction: column;
     width: fit-content;
     max-width: 45%;
+}
+
+#footer .footer-wrapper .footer-col a:hover {
+    color: #000;
 }
 
 #footer .footer-wrapper .slogan {

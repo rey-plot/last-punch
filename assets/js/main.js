@@ -105,28 +105,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    gsap.from('.goto-wrapper', 1, {
+    // goto-wrapper
+    gsap.from('.goto-wrapper', 2, {
         opacity: 0,
         y: 100,
         stagger: 1,
         ease: "power2.out",
+
         scrollTrigger: {
             trigger: ".goto-wrapper",
             start: "60% 100%",
             // markers: true,
+            onEnter: () => {
+                $('.goto-wrapper').addClass('theme-dark');
+            },
+            onLeaveBack: () => {
+                $('.goto-wrapper').removeClass('theme-dark');
+            }
         }
     });
 
-    // gsap.to('.goto-wrapper', 1,{
-    //     backgroundColor: '#1C1C1C',
-    //     color: '#a0fdd0',
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //         trigger: ".goto-wrapper",
-    //         start: "top 80%",
-    //         end: "top 30%",
-    //     }
-    // });
+
+
 });
 
 

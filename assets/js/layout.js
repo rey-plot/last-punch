@@ -8,60 +8,79 @@ window.headerManager = {
     changeColor: function (colorIndex) {
         if (!this.isScrolled) {
             this.currentColor = this.colors[colorIndex];
-            const headerBoxes = document.querySelectorAll('header > div, footer > div');
+            // 헤더: background-color 변경
+            const headerBoxes = document.querySelectorAll('header > div');
             headerBoxes.forEach(box => {
                 box.style.backgroundColor = this.currentColor;
+                box.style.color = ''; // 헤더는 글자색 원래대로
+            });
+            // 푸터: background-color 제거, color만 변경
+            const footerBoxes = document.querySelectorAll('footer > div');
+            footerBoxes.forEach(box => {
+                box.style.backgroundColor = 'transparent';
+                box.style.color = this.currentColor;
             });
         }
     }
 };
 
 $(document).ready(function () {
-    // 현재 페이지의 base path 계산
-    const basePath = window.location.pathname.split('/').slice(0, -1).join('/');
-
-    // 헤더, 푸터 로드
-    $("#header").load(`${basePath}/include/header.html`, function () {
-        $("#footer").load(`${basePath}/include/footer.html`, function () {
+    // 헤더, 푸터 로드 (경로를 고정)
+    $("#header").load("../_includes/header.html", function () {
+        $("#footer").load("../_includes/footer.html", function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
 
-            // 초기 opacity 설정
-            headerBoxes.forEach(box => {
-                box.style.opacity = '0.9';
-                box.style.backgroundColor = window.headerManager.currentColor;
-            });
+            // opacity(css로 대체)
+            // headerBoxes.forEach(box => {
+            //     box.style.opacity = '0.9';
+            //     box.style.backgroundColor = window.headerManager.currentColor;
+            // });
 
             // 스크롤 이벤트
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 0) {
                     window.headerManager.isScrolled = true;
+                    // 헤더만 배경색 적용
+                    const headerBoxes = document.querySelectorAll('header > div');
                     headerBoxes.forEach(box => {
                         box.style.backgroundColor = window.headerManager.currentColor;
                     });
+                    // 푸터는 배경색 제거, 글자색만 적용
+                    const footerBoxes = document.querySelectorAll('footer > div');
+                    footerBoxes.forEach(box => {
+                        box.style.backgroundColor = 'transparent';
+                        box.style.color = window.headerManager.currentColor;
+                    });
                 } else {
                     window.headerManager.isScrolled = false;
+                    // 필요하다면 스크롤이 맨 위일 때의 스타일도 여기서 다시 지정
                 }
             });
 
-            // 짧은 페이지 처리(페이지가 화면보다 짧을 때)
+            // 스크롤된 것처럼 스타일 적용되는 착각주기
             if (document.documentElement.scrollHeight <= window.innerHeight) {
-                document.querySelector('header').classList.add('scrolled');
-                document.querySelector('footer').classList.add('scrolled');
+                document.querySelectorAll('header, footer').forEach(el => el.classList.add('scrolled'));
             }
 
-            // about 페이지 js
-            gsap.from('.about-main .title-line', 0.5, {
+
+
+
+
+
+
+            // about 페이지 전용 gsap 코드 적어서여따둠
+            gsap.from('.about-main .title-line', 1, {
                 y: 30,
                 opacity: 0,
                 stagger: 0.2,
-                ease: 'power2.out'
-            })
-            gsap.from('.about-main .desc-wrapper .desc', 0.8, {
+                ease: 'power2.out',
+            });
+            gsap.from('.about-main .desc-wrapper .desc', 1.2, {
                 y: 30,
                 opacity: 0,
                 stagger: 0.2,
-                ease: 'power2.out'
-            }, ">");
+                ease: 'power2.out',
+            });
         });
     });
 });
