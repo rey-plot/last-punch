@@ -61,7 +61,7 @@
 
 
 .content-inner .about-txt .txt {
-    font-family: 'boska-MediumItalic';
+    font-family: 'Boska-MediumItalic';
 
     font-size: 8em;
     font-weight: 100;
@@ -151,7 +151,7 @@
     font-size: 7.5rem;
     line-height: .9;
     text-transform: uppercase;
-    font-family: 'GeneralSans-bold';
+    font-family: 'GeneralSans-Bold';
 
     color: #000;
 }
@@ -200,7 +200,7 @@
 
 
 .last-wrapper .sc-last .last-title {
-    font-family: 'boska-bolditalic';
+    font-family: 'Boska-BoldItalic';
 
     font-size: 8em;
     font-weight: 100;
@@ -251,7 +251,7 @@
 }
 
 .goto-wrapper .goto-list .goto-item {
-    font-family: 'boska-bold';
+    font-family: 'Boska-Bold';
     font-size: 10em;
     line-height: 1;
     text-decoration: underline;
