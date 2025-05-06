@@ -16,16 +16,16 @@
 
 .body-no-scroll {
     overflow: hidden;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: 100%;
 }
 
 
 
-
 .works-wrapper {
     width: 100%;
+    padding: 2% 0;
 }
 
 .works-wrapper .works-area {
@@ -33,17 +33,33 @@
 
 }
 
-.works-wrapper .works-list {
+.works-wrapper .works-list {}
+
+.works-wrapper .works-item {
     display: flex;
     flex-direction: column;
     gap: 100px;
+
+    width: 100%;
+    height: calc(100svh - 4%);
+    /* 2% top + 2% bottom padding 보정 */
+    padding: 2rem;
 }
 
-.works-wrapper .works-item {}
+.works-item .open-modal-btn {
+    width: 100%;
+    height: 100svh;
+}
 
-.works-item .open-modal-btn {}
+.works-item .open-modal-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.works-item .open-modal-btn img {}
+.works-item .open-modal-btn:hover {
+    opacity: 0.9;
+}
 
 
 .modal-wrapper {}
@@ -94,6 +110,7 @@
     height: 100%;
 }
 
+
 .modal-list img {
     width: 100%;
     object-fit: cover;
@@ -113,18 +130,17 @@
 
 
 .modal-list .desc-txt {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'GeneralSans-Light';
     font-size: 1rem;
     line-height: 1.5;
-    font-weight: 400;
-    font-style: normal;
+    letter-spacing: 0.03em;
     flex: 1;
 
     text-align: left;
 }
 
 .modal-list .desc-title {
-    font-family: 'PPEditorialOld-Ultralight.woff2';
+    font-family: 'boska-mediumitalic';
     font-size: 6rem;
     line-height: .9;
     text-transform: uppercase;
@@ -137,26 +153,35 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    text-align: left;
     align-items: center;
+}
+
+.modal-list .desc-info .desc-info-list {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
+.modal-list .desc-info .desc-info-txt-title {
+    font-family: 'GeneralSans-LightItalic';
+    font-size: 1rem;
+
+}
+
 .modal-list .desc-info .desc-info-txt {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'GeneralSans-Light';
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;
-    font-style: normal;
-
     text-align: left;
-    white-space: pre-line;
-}
 
+}
 
 
 
 .modal-list .modal-close {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'GeneralSans-Light';
     font-size: 0.8rem;
     line-height: 1.5;
     font-weight: 400;

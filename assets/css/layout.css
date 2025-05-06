@@ -1,7 +1,16 @@
 #header,
 #footer {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'GeneralSans-Light';
+    letter-spacing: 0.05em;
 }
+
+#header a,
+#footer a {
+    text-decoration: underline;
+    text-decoration-thickness: 0.8px;
+    text-underline-offset: 1.5px;
+}
+
 
 #header>div,
 #footer>div {
@@ -23,13 +32,11 @@
 }
 
 #header .header-wrapper {
-    background-color: #a0fdd0d9;
     box-sizing: border-box;
-
-    width: clamp(320px, 80%, 620px);
-
     height: 70px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0 32px;
 
     font-size: 16px;
 
@@ -41,15 +48,27 @@
 #header .header-wrapper .title {
     display: flex;
     flex-direction: column;
+    background-color: #a0fdd0d9;
+    height: 100%;
+
 }
 
 #header .header-wrapper .title a {}
 
 #header .header-wrapper .title p {}
 
-#header .header-wrapper .cate-list {}
+#header .header-wrapper .cate-list {
+    background-color: #a0fdd0d9;
+    height: 100%;
 
-#header .header-wrapper .cate-list .cate-item {}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#header .header-wrapper a:hover {
+    opacity: 0.5;
+}
 
 
 
@@ -74,13 +93,15 @@
 
 
 #footer .footer-wrapper {
-    /* background-color: #a0fdd0d9; */
     color: #a0fdd0;
     box-sizing: border-box;
-    width: clamp(500px, 80%, 1000px);
+    /* width: clamp(500px, 80%, 700px); */
     height: 70px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 32px;
+    margin: 0;
     font-size: 16px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,8 +111,10 @@
 #footer .footer-wrapper .footer-col {
     display: flex;
     flex-direction: column;
-    width: fit-content;
     max-width: 45%;
+}
+#footer .footer-wrapper .footer-col:nth-child(2) {
+    align-items: flex-end;
 }
 
 #footer .footer-wrapper .footer-col a:hover {
@@ -99,10 +122,5 @@
 }
 
 #footer .footer-wrapper .slogan {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'IBMPlexMono-Light.woff2';
     font-size: 16px;
 }

@@ -1,6 +1,6 @@
 // 전역 객체로 만들어서 다른 JS 파일에서도 접근 가능하게
 window.headerManager = {
-    colors: ['#a0fdd0', '#fdd0a0', '#d0a0fd'],
+    colors: ['#a0fdd0', '#fdd0a0', '#C6D1FF'],
     currentColor: '#a0fdd0',
     isScrolled: false,
 
@@ -8,11 +8,16 @@ window.headerManager = {
     changeColor: function (colorIndex) {
         if (!this.isScrolled) {
             this.currentColor = this.colors[colorIndex];
-            // 헤더: background-color 변경
-            const headerBoxes = document.querySelectorAll('header > div');
-            headerBoxes.forEach(box => {
+            // 헤더: .title, .cate-list만 background-color 변경
+            const headerTitles = document.querySelectorAll('.header-wrapper .title');
+            headerTitles.forEach(box => {
                 box.style.backgroundColor = this.currentColor;
-                box.style.color = ''; // 헤더는 글자색 원래대로
+                box.style.color = '';
+            });
+            const headerCateLists = document.querySelectorAll('.header-wrapper .cate-list');
+            headerCateLists.forEach(box => {
+                box.style.backgroundColor = this.currentColor;
+                box.style.color = '';
             });
             // 푸터: background-color 제거, color만 변경
             const footerBoxes = document.querySelectorAll('footer > div');
@@ -26,8 +31,8 @@ window.headerManager = {
 
 $(document).ready(function () {
     // 헤더, 푸터 로드 (경로를 고정)
-    $("#header").load("/test/_includes/header.html", function () {
-        $("#footer").load("/test/_includes/footer.html", function () {
+    $("#header").load("/_includes/header.html", function () {
+        $("#footer").load("/_includes/footer.html", function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
 
             // opacity(css로 대체)
@@ -40,9 +45,13 @@ $(document).ready(function () {
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 0) {
                     window.headerManager.isScrolled = true;
-                    // 헤더만 배경색 적용
-                    const headerBoxes = document.querySelectorAll('header > div');
-                    headerBoxes.forEach(box => {
+                    // 헤더: .title, .cate-list만 배경색 적용
+                    const headerTitles = document.querySelectorAll('.header-wrapper .title');
+                    headerTitles.forEach(box => {
+                        box.style.backgroundColor = window.headerManager.currentColor;
+                    });
+                    const headerCateLists = document.querySelectorAll('.header-wrapper .cate-list');
+                    headerCateLists.forEach(box => {
                         box.style.backgroundColor = window.headerManager.currentColor;
                     });
                     // 푸터는 배경색 제거, 글자색만 적용

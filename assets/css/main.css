@@ -39,22 +39,18 @@
 .content-wrapper {
     position: relative;
     z-index: 2;
-    /* border: 10px solid lightyellow; */
     background-color: #fff;
     width: 100%;
-    /* min-height: 100vh;
-    padding-bottom: 100px; */
 }
 
 .content-wrapper .content-inner {
     padding: 0 .625rem;
     margin: 0 auto;
-
     max-width: 1920px;
 }
 
 .content-inner .about-txt {
-    font-family: 'PPEditorialOld-Ultralight.woff2';
+    font-family: 'boska-mediumitalic';
 
     width: 100%;
     height: 100svh;
@@ -91,59 +87,62 @@
 
 
 
-
-.content-inner .intro-1 {}
-
-.content-inner .intro-1 img {
-    object-fit: cover;
+.content-inner .gallery {
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    gap: 100px;
 }
 
-.content-inner .intro-2 {}
+.content-inner .gallery .intro-img {
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+}
 
-.content-inner .intro-2 img {}
+.content-inner .gallery .intro-img img {
+    width: 100%;
+    object-fit: cover;
+}
 
-.content-inner .intro-3 {}
 
-.content-inner .intro-3 img {}
 
 
 
 
 .client-wrapper {
     padding: 15vh 0;
-    /* border: 10px dashed lightgreen; */
-
     width: 100%;
-    /* height: 200svh; */
+    height: 150svh;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* if list are more longer(or shorter), you change height */
 }
 
 .client-wrapper .client-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     width: 100%;
-    height: 200svh;
-    /* if list are more longer(or shorter), you changed height */
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .client-wrapper .client-area .client-title {
-    color: #a0fdd0;
+    color: #C6D1FF;
     font-size: 15em;
 
     position: sticky;
     top: 50%;
     transform: translateY(-50%);
 
-    font-family: 'PPEditorialOld-Ultralight.woff2';
-
+    font-family: 'modak';
     text-align: center;
     line-height: 1;
     word-break: keep-all;
-    z-index: 10;    
+    z-index: 10;
 }
 
 .client-wrapper .client-area .client-item {
@@ -151,7 +150,8 @@
     font-size: 7.5rem;
     line-height: .9;
     text-transform: uppercase;
-    font-family: 'ESAllianz-Extrabold.woff2';
+    font-family: 'GeneralSans-bold';
+
     color: #000;
 }
 
@@ -160,45 +160,46 @@
 
 
 
-.love-wrapper {
+.last-wrapper {
     width: 100%;
     height: auto;
 
     overflow: hidden;
 }
 
-.love-wrapper .sc-love {
+.last-wrapper .sc-last {
     width: 100%;
     height: 150svh;
     position: relative;
-
-    /* border: 10px solid royalblue; */
-
 }
 
 
-.love-wrapper .sc-love .heart-shape {
+.last-wrapper .sc-last .round-shape {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
+    /* translate는 그대로, scale은 0으로 시작 */
+    transform: translate(-50%, -50%) scale(0);
     opacity: 0;
-    overflow: hidden;
     border-radius: 50%;
+    overflow: hidden;
+
+    /* 고정 px 대신 가로 100% (부모 기준) */
+    width: 100%;
+    /* 높이는 자동으로 비율 유지 (이미지가 1:1이면 정사각) */
+    height: auto;
 }
 
-.love-wrapper .sc-love .heart-shape img {
+.last-wrapper .sc-last .round-shape img {
+    /* 부모(.round-shape) 크기에 맞춰서 */
+    width: 100%;
+    height: auto;
     object-fit: cover;
-
-    width: 50px;
-    height: 50px;
-
 }
 
 
-.love-wrapper .sc-love .love-title {
-    font-family: 'PPEditorialOld-Ultralight.woff2';
+.last-wrapper .sc-last .last-title {
+    font-family: 'boska-bolditalic';
 
     font-size: 8em;
     font-weight: 100;
@@ -249,7 +250,7 @@
 }
 
 .goto-wrapper .goto-list .goto-item {
-    font-family: 'PPEditorialOld-Ultralight.woff2';
+    font-family: 'boska-bold';
     font-size: 10em;
     line-height: 1;
     text-decoration: underline;

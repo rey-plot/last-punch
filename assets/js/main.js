@@ -77,33 +77,57 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power2.out",
     });
 
-    // love
 
-    const loveTimeline = gsap.timeline({
+
+
+
+
+
+    // last
+    const lastTimeline = gsap.timeline({
         scrollTrigger: {
-            trigger: ".sc-love",
+            trigger: ".sc-last",
             start: "top center",
             // markers: true,
         }
     });
 
-    loveTimeline.from('.sc-love .love-title', {
+    lastTimeline.from('.sc-last .last-title', {
         opacity: 0,
         y: 30,
         stagger: 0.2,
         ease: "power2.out",
     });
 
-    loveTimeline.to('.sc-love .heart-shape', 1.5, {
-        scale: window.innerWidth / 50,
+    // lastTimeline.to('.sc-last .round-shape', 1.5, {
+    //     // scale: window.innerWidth / 50,
+    //     scale: 1.1,
+    //     opacity: 1,
+    //     ease: "power2.out",
+    //     onComplete: function () {
+    //         lastTimeline.to('.sc-last .round-shape', {
+    //             borderRadius: '0%',
+    //         });
+    //     }
+    // });
+
+    lastTimeline.to('.sc-last .round-shape', {
+        duration: 1.5,
+        scale: 1,
         opacity: 1,
-        ease: "power2.out",
-        onComplete: function () {
-            loveTimeline.to('.sc-love .heart-shape', {
-                borderRadius: '0%',
-            });
-        }
+        ease: "power2.out"
+    })
+    
+    // 2) 완전히 커진 뒤 borderRadius를 0%로
+    .to('.sc-last .round-shape', {
+        duration: 1.5,
+        borderRadius: '0%',
+        ease: "power2.out"
     });
+
+
+
+
 
     // goto-wrapper
     gsap.from('.goto-wrapper', 2, {
@@ -119,9 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
             onEnter: () => {
                 $('.goto-wrapper').addClass('theme-dark');
             },
-            onLeaveBack: () => {
-                $('.goto-wrapper').removeClass('theme-dark');
-            }
+            // onLeaveBack: () => {
+            //     $('.goto-wrapper').removeClass('theme-dark');
+            // }
         }
     });
 

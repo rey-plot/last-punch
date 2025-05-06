@@ -14,7 +14,7 @@
 }
 
 .main-wrapper .about-title {
-    font-family: 'PPEditorialOld-Ultralight.woff2';
+    font-family: 'boska-mediumitalic';
     font-size: 8em;
     font-weight: 100;
     line-height: .8;
@@ -31,7 +31,7 @@
 .about-main .desc-wrapper {}
 
 .about-main .desc-wrapper .desc {
-    font-family: 'IBMPlexMono-Light.woff2';
+    font-family: 'GeneralSans-Light';
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -40,10 +40,13 @@
 
 .about-main .desc-wrapper .desc .desc-title {
     margin-bottom: 16px;
+    font-family: 'GeneralSans-Italic';
 }
 
 .about-main .desc-wrapper .desc .left-desc {
     flex: 1;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
 }
 
 .about-main .desc-wrapper .desc .right-desc {

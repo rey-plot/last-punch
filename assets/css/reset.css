@@ -59,6 +59,9 @@ input {
     border: 0;
 }
 
+p {
+    margin: 0;
+}
 
 body {
     font-family: 'Inter', 'Pretendard', sans-serif;

@@ -1,16 +1,18 @@
 $(document).ready(function () {
     // 모달 열기
-    $(".open-modal-btn").on("click", function () {
+
+    $(".open-modal-btn").click(function () {
         const target = $(this).data("target");
         $(target).removeClass("none");
         $("body").addClass("body-no-scroll");
 
-        
+
         // close 버튼 초기 상태
         gsap.set(`${target} .modal-close`, {
             opacity: 0,
             y: 20
         });
+
 
         // 스크롤에 따른 close 버튼 애니메이션
         ScrollTrigger.create({
@@ -35,7 +37,7 @@ $(document).ready(function () {
             y: 30,
             opacity: 0,
             ease: 'power2.out',
-            delay: 1.5,  // fadeIn 후에 시작
+            delay: 1.5,  // 딜레이로 쇼부
         });
     });
 
