@@ -49,15 +49,20 @@
 .works-item .open-modal-btn {
     width: 100%;
     height: 100svh;
+    overflow: hidden;
 }
 
 .works-item .open-modal-btn img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    transition: transform 0.9s ease, opacity 0.8s ease;
+    transform-origin: center center;
 }
 
-.works-item .open-modal-btn:hover {
+.works-item .open-modal-btn:hover img {
+    transform: scale(0.98);
     opacity: 0.9;
 }
 

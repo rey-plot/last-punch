@@ -111,20 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 
-    lastTimeline.to('.sc-last .round-shape', {
-        duration: 1.5,
+
+
+    lastTimeline.to('.sc-last .round-shape', 1.5, {
         scale: 1,
         opacity: 1,
         ease: "power2.out"
     })
-    
-    // 2) 완전히 커진 뒤 borderRadius를 0%로
-    .to('.sc-last .round-shape', {
-        duration: 1.5,
-        borderRadius: '0%',
-        ease: "power2.out"
-    });
 
+        // 2) 완전히 커진 뒤 borderRadius를 0%로
+        .to('.sc-last .round-shape', 1.5, {
+            borderRadius: '0%',
+            ease: "power2.out"
+        });
 
 
 
