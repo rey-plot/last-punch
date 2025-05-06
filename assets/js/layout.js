@@ -30,7 +30,7 @@ window.headerManager = {
 };
 
 $(document).ready(function () {
-    // 헤더, 푸터 로드 .. 상대경로
+    // 헤더, 푸터 로드 (깃허브 Pages 절대경로로 고정)
     $("#header").load("/test/_includes/header.html", function () {
         $("#footer").load("/test/_includes/footer.html", function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
