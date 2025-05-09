@@ -1,9 +1,22 @@
 /* 1 main-img */
+.main-swiper-wrapper {
+    width: 100%;
+    height: 200svh;
+}
+
+.main-swiper-inner {
+    width: 100%;
+    height: 100svh;
+
+    position: sticky;
+    top: 0;
+}
+
 .swiper {
     width: 100%;
     height: 100svh;
     overflow: hidden;
-    position: relative;
+
     z-index: 1;
 }
 
@@ -41,6 +54,8 @@
     z-index: 2;
     background-color: #fff;
     width: 100%;
+    margin-top: -100svh;
+    /* 스와이퍼 위로 올라오게 */
 }
 
 .content-wrapper .content-inner {
@@ -200,7 +215,7 @@
 
 
 .last-wrapper .sc-last .last-title {
-    font-family: 'Boska-BoldItalic';
+    font-family: 'Boska-MediumItalic';
 
     font-size: 8em;
     font-weight: 100;
