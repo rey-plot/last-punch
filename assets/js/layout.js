@@ -31,8 +31,8 @@ window.headerManager = {
 
 $(document).ready(function () {
     // 헤더, 푸터 로드 (깃허브 Pages 절대경로로 고정)
-    $("#header").load("/last-punch/_includes/header.html", function () {
-        $("#footer").load("/last-punch/_includes/footer.html", function () {
+    $("#header").load("_includes/header.html", function () {
+        $("#footer").load("_includes/footer.html", function () {
             const headerBoxes = document.querySelectorAll('header > div, footer > div');
 
             // opacity(css로 대체)
